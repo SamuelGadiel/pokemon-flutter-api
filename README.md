@@ -1,45 +1,18 @@
-# Express API Starter
+# Pokemon Flutter API
 
-Includes API Server utilities:
+A simple API to serve some data from pokemons
 
-* [morgan](https://www.npmjs.com/package/morgan)
-  * HTTP request logger middleware for node.js
-* [helmet](https://www.npmjs.com/package/helmet)
-  * Helmet helps you secure your Express apps by setting various HTTP headers. It's not a silver bullet, but it can help!
-* [dotenv](https://www.npmjs.com/package/dotenv)
-  * Dotenv is a zero-dependency module that loads environment variables from a `.env` file into `process.env`
+It shows the following data
 
-Development utilities:
+* ID
+* Name
+* Tyoe
+* Generation
+* Region
+* Sprite
+* Design
 
-* [nodemon](https://www.npmjs.com/package/nodemon)
-  * nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
-* [eslint](https://www.npmjs.com/package/eslint)
-  * ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
-* [mocha](https://www.npmjs.com/package/mocha)
-  * ☕️ Simple, flexible, fun JavaScript test framework for Node.js & The Browser ☕️
-* [supertest](https://www.npmjs.com/package/supertest)
-  * HTTP assertions made easy via superagent.
+Not all pokemons are included, only the starters from each generation up to generation 8 - Galar.
 
-## Setup
-
-```
-npm install
-```
-
-## Lint
-
-```
-npm run lint
-```
-
-## Test
-
-```
-npm run test
-```
-
-## Development
-
-```
-npm run dev
-```
+The base structure of the API was forked from W3CJ's [create-express-api](https://github.com/w3cj/create-express-api)
+The pokemon data given by PokeAPI. The data was selected and hardcoded in a `.json` file. So this api only serves this `.json`.
