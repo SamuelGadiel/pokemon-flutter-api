@@ -3,10 +3,11 @@ const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
 
+const pokemonData = require('./dados.json');
+
 require('dotenv').config();
 
 const middlewares = require('./middlewares');
-const api = require('./api');
 
 const app = express();
 
@@ -16,12 +17,9 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.json({
-    message: '🦄🌈✨👋🌎🌍🌏✨🌈🦄'
-  });
+  res.json(pokemonData);
 });
 
-app.use('/api/v1', api);
 
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
